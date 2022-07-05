@@ -11,7 +11,7 @@ import {
 
 const HitCount = connectStateResults(({ searchResults }) => {
   const hitCount = searchResults && searchResults.nbHits
-
+  // hitCountが0のときは、何も表示したくない
   return hitCount > 0 ? (
     <div className="HitCount">
       {hitCount} result{hitCount !== 1 ? `s` : ``}
